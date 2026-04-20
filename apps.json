@@ -11,13 +11,13 @@
       "bundleIdentifier": "com.umusic.sideload",
       "developerName": "uMusic",
       "version": "0.1.1",
-      "versionDate": "2026-04-20T11:47:45Z",
+      "versionDate": "2026-04-20T11:56:53Z",
       "versionDescription": "Seed entry. The release workflow overwrites this on every tag push.",
       "downloadURL": "https://github.com/TNChalise/umusic-dist/releases/download/v0.1.1/umusic.ipa",
       "localizedDescription": "Third-party YouTube Music client \u2014 playback, library, downloads, offline playlists, lyrics. Sign in with your YouTube Music account; nothing leaves your device.",
       "iconURL": "https://raw.githubusercontent.com/TNChalise/umusic-dist/main/icon.png",
       "tintColor": "ffffff",
-      "size": 1523343,
+      "size": 1524493,
       "permissions": [
         {
           "type": "background-audio",
@@ -31,9 +31,9 @@
       "versions": [
         {
           "version": "0.1.1",
-          "date": "2026-04-20T11:47:45Z",
+          "date": "2026-04-20T11:56:53Z",
           "downloadURL": "https://github.com/TNChalise/umusic-dist/releases/download/v0.1.1/umusic.ipa",
-          "size": 1523343
+          "size": 1524493
         },
         {
           "version": "0.1.0",
