@@ -1,0 +1,41 @@
+{
+  "name": "uMusic",
+  "identifier": "com.umusic.source",
+  "subtitle": "Private YouTube Music client for iOS",
+  "description": "Unofficial, unaffiliated YouTube Music client. Built for a small circle; no public support. Install requires SideStore or AltStore.",
+  "iconURL": "https://raw.githubusercontent.com/TNChalise/umusic-dist/main/icon.png",
+  "website": "https://github.com/TNChalise/umusic-dist",
+  "apps": [
+    {
+      "name": "uMusic",
+      "bundleIdentifier": "com.umusic.sideload",
+      "developerName": "uMusic",
+      "version": "0.1.0",
+      "versionDate": "2026-04-20T06:26:51Z",
+      "versionDescription": "Seed entry. The release workflow overwrites this on every tag push.",
+      "downloadURL": "https://github.com/TNChalise/umusic-dist/releases/download/v0.1.0/umusic.ipa",
+      "localizedDescription": "Third-party YouTube Music client \u2014 playback, library, downloads, offline playlists, lyrics. Sign in with your YouTube Music account; nothing leaves your device.",
+      "iconURL": "https://raw.githubusercontent.com/TNChalise/umusic-dist/main/icon.png",
+      "tintColor": "ffffff",
+      "size": 1524840,
+      "permissions": [
+        {
+          "type": "background-audio",
+          "usageDescription": "Keep music playing while you use other apps or lock your phone."
+        },
+        {
+          "type": "network",
+          "usageDescription": "Stream from YouTube Music and fetch artwork."
+        }
+      ],
+      "versions": [
+        {
+          "version": "0.1.0",
+          "date": "2026-04-20T06:26:51Z",
+          "downloadURL": "https://github.com/TNChalise/umusic-dist/releases/download/v0.1.0/umusic.ipa",
+          "size": 1524840
+        }
+      ]
+    }
+  ]
+}
