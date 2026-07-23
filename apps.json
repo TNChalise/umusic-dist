@@ -10,14 +10,14 @@
       "name": "uMusic",
       "bundleIdentifier": "com.umusic.sideload",
       "developerName": "uMusic",
-      "version": "0.1.13",
-      "versionDate": "2026-04-27T04:20:43Z",
-      "versionDescription": "fix(ci): use fetch-depth: 0 instead of fetch-tags: true to get annotated tags\n\nfetch-tags: true with --depth=1 conflicts on annotated tag pushes: actions/\ncheckout maps GITHUB_SHA (the commit) to refs/tags/vX.Y.Z at the same time\nfetch-tags tries to store the tag object there \u2014 git exits 128. A full clone\navoids the shallow refspec collision and still delivers %(contents) for notes.\n\nCo-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>",
-      "downloadURL": "https://github.com/TNChalise/umusic-dist/releases/download/v0.1.13/umusic.ipa",
+      "version": "0.1.14",
+      "versionDate": "2026-07-23T06:53:14Z",
+      "versionDescription": "fix(search,playback): parse new flat search shape, unblock kids-content playback\n\nYouTube changed the /search response: results now arrive as a\nmusicCardShelfRenderer top result plus per-row itemSectionRenderer\nwrappers instead of titled musicShelfRenderer shelves, so the parser\nreturned zero results for every query. Teach the models + SearchParser\nboth shapes (legacy shelf path kept verbatim), classify flat rows by\ntheir subtitle type token, and admit Video rows as playable songs \u2014\nkids/regional content is mostly indexed as Video.\n\nPlayback: ANDROID_VR hard-rejects \"made for kids\" videos (UNPLAYABLE),\nand the webview cascade's non-web fingerprints inherited desktop-web\ncontext fields that Innertube 400s \u2014 leaving VR as the only working\nclient, so kids songs never played. Give override fingerprints a clean\ncontext (locale + visitorData only), gate cascade winners on direct-URL\naudio/mp4 (or live HLS) so an undecodable webm-only response can't\nstall AVPlayer silently, and add TVHTML5 to the native fallback cascade\n(cookie-auth friendly, serves kids content).\n\nCo-Authored-By: Claude Fable 5 <noreply@anthropic.com>",
+      "downloadURL": "https://github.com/TNChalise/umusic-dist/releases/download/v0.1.14/umusic.ipa",
       "localizedDescription": "Third-party YouTube Music client \u2014 playback, library, downloads, offline playlists, lyrics. Sign in with your YouTube Music account; nothing leaves your device.",
       "iconURL": "https://raw.githubusercontent.com/TNChalise/umusic-dist/main/icon.png",
       "tintColor": "ffffff",
-      "size": 1712452,
+      "size": 1719361,
       "permissions": [
         {
           "type": "background-audio",
@@ -29,6 +29,13 @@
         }
       ],
       "versions": [
+        {
+          "version": "0.1.14",
+          "date": "2026-07-23T06:53:14Z",
+          "downloadURL": "https://github.com/TNChalise/umusic-dist/releases/download/v0.1.14/umusic.ipa",
+          "size": 1719361,
+          "localizedDescription": "fix(search,playback): parse new flat search shape, unblock kids-content playback\n\nYouTube changed the /search response: results now arrive as a\nmusicCardShelfRenderer top result plus per-row itemSectionRenderer\nwrappers instead of titled musicShelfRenderer shelves, so the parser\nreturned zero results for every query. Teach the models + SearchParser\nboth shapes (legacy shelf path kept verbatim), classify flat rows by\ntheir subtitle type token, and admit Video rows as playable songs \u2014\nkids/regional content is mostly indexed as Video.\n\nPlayback: ANDROID_VR hard-rejects \"made for kids\" videos (UNPLAYABLE),\nand the webview cascade's non-web fingerprints inherited desktop-web\ncontext fields that Innertube 400s \u2014 leaving VR as the only working\nclient, so kids songs never played. Give override fingerprints a clean\ncontext (locale + visitorData only), gate cascade winners on direct-URL\naudio/mp4 (or live HLS) so an undecodable webm-only response can't\nstall AVPlayer silently, and add TVHTML5 to the native fallback cascade\n(cookie-auth friendly, serves kids content).\n\nCo-Authored-By: Claude Fable 5 <noreply@anthropic.com>"
+        },
         {
           "version": "0.1.13",
           "date": "2026-04-27T04:20:43Z",
